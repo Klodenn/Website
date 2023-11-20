@@ -143,14 +143,12 @@ section {
     margin: 20px;
     text-align-last: left;
 }
-
-.job-card {
-    background-color: #d4acac;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    margin-bottom: 20px;
-    text-align: left;
+.card{
+  background-color: #a86363;
+  width: 50px;
+}
+.card:hover {
+  transform: scale(0.9);
 }
 /* Mabini CareerSeek */
 
@@ -329,3 +327,31 @@ footer {
   font-size: 24px;
   margin-right: 5px;
 }
+
+.momo {
+  display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .momo a {
+      text-decoration: none; /* Remove underlines from links */
+      margin: 10px; 
+    }
+
+    .momo img {
+      width: 100%; /* Set the width of each image to 100% of the container */
+      max-width: 200px; /* Set the maximum width for responsiveness */
+      height: auto; /* Maintain the aspect ratio */
+      border: 2px solid #ccc; /* Add a border for better visibility */
+      border-radius: 8px; 
+    }
+
+    /* Media query for smaller screens */
+    @media screen and (max-width: 600px) {
+      .momo img {
+        max-width: 100%; /* Adjust the maximum width for smaller screens */
+      }
+    }
+        
+    
