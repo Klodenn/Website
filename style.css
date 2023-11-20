@@ -28,7 +28,7 @@
 /* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
 .icon-bar {
     position: fixed;
-    top: 70%;
+    top: 50%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
@@ -77,7 +77,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-image: url(/wallpaper.jpg);  
+    background-image: url(pics/wallpaper.jpg);  
 }
 
 nav li {
@@ -131,7 +131,7 @@ nav a {
     }
 /* find a job css */
 .parallax {
-    background-image: url("proo.jpeg");
+    background-image: url("pics/proo.jpeg");
     min-height: 500px; 
   
     background-attachment: fixed;
