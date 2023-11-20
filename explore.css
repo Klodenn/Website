@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("job1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    max-width: 0px;
+    margin: auto;
+    padding: 0px;
+}
+
+header {
+    text-align: center;
+    padding: 10px 0;
+}
+
+main {
+    text-align: center;
+}
+
+.centered-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.centered-button button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    color: rgb(24, 23, 23);
+}
+footer {
+    text-align: center;
+    padding: 20px 0;
+}
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+}

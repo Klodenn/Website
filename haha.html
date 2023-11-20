@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title></title>
+    <style>
+        .average-rating-container {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .star-icon {
+            color: #ff9800;
+            font-size: 24px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="active" href="home.html">Home</a>
+        <a href="find_a_jobs.html">Find a Jobs</a>
+        <a href="about.html">About</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="form-container">
+        <h2>Job Application Review</h2>
+        <form id="reviewForm">
+            <label for="applicant">Applicant Name:</label>
+            <input type="text" id="applicant" name="applicant" required>
+
+            <label for="position">Position Applied :</label>
+            <textarea id="position" name="position" rows="1" required></textarea>
+
+            <label for="feedback">Feedback:</label>
+            <textarea id="feedback" name="feedback" rows="2"></textarea>
+
+            <div class="rating-container">
+                <span onclick="rate(1)">&#9733;</span>
+                <span onclick="rate(2)">&#9733;</span>
+                <span onclick="rate(3)">&#9733;</span>
+                <span onclick="rate(4)">&#9733;</span>
+                <span onclick="rate(5)">&#9733;</span>
+            </div>
+
+            <button type="button" onclick="submitReview()">Submit Review</button>
+        </form>
+    </div>
+
+    <div class="reviews-container" id="reviewsContainer">
+        <h2>Other Reviews</h2>
+    </div>
+
+    <div class="average-rating-container">
+        <p>Average Rating:</p>
+        <div id="averageRating" class="star-icon">&#9733;</div>
+        <span id="averageRatingValue">N/A</span>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <p>Total Reviews:</p>
+        <span id="totalReviews">0</span>
+    </div>
+
+    <script>
+        let currentRating = 0;
+        let totalRating = 0;
+        let numberOfReviews = 0;
+
+        function rate(stars) {
+            currentRating = stars;
+
+            // Highlight the selected stars
+            for (let i = 1; i <= 5; i++) {
+                const star = document.querySelector(`.rating-container span:nth-child(${i})`);
+                if (i <= currentRating) {
+                    star.style.color = '#ff9800';
+                } else {
+                    star.style.color = '#ccc';
+                }
+            }
+        }
+
+        function submitReview() {
+            const applicant = document.getElementById('applicant').value;
+            const position = document.getElementById('position').value;
+            const feedback = document.getElementById('feedback').value;
+
+            // Check if any required fields are empty
+            if (!applicant || !position || currentRating === 0) {
+                alert("Please fill out all required fields (Applicant Name, Position Applied, and Rating).");
+                return;
+            }
+
+            const reviewContainer = document.getElementById('reviewsContainer');
+            const newReview = document.createElement('div');
+            newReview.className = 'review';
+            newReview.innerHTML = `
+                <p><strong>Applicant Name:</strong> ${applicant}</p>
+                <p><strong>Position Applied :</strong> ${position}</p>
+                <p><strong>Rating:</strong> ${currentRating} star(s)</p>
+                <p><strong>Feedback:</strong> ${feedback}</p>
+            `;
+
+            reviewContainer.appendChild(newReview);
+
+            // Update the total rating and number of reviews
+            totalRating += currentRating;
+            numberOfReviews++;
+
+            // Update the average rating
+            const averageRating = (totalRating / numberOfReviews).toFixed(2);
+            document.getElementById('averageRatingValue').textContent = averageRating;
+
+            // Update the total reviews
+            document.getElementById('totalReviews').textContent = numberOfReviews;
+
+            // Reset the values of the text areas and the rating
+            document.getElementById('applicant').value = '';
+            document.getElementById('position').value = '';
+            document.getElementById('feedback').value = '';
+            currentRating = 0;
+
+            // Reset the star colors
+            for (let i = 1; i <= 5; i++) {
+                const star = document.querySelector(`.rating-container span:nth-child(${i})`);
+                star.style.color = '#ccc';
+            }
+        }
+    </script>
+</body>
+
+</html>
