@@ -17,7 +17,7 @@
         </div>
     </main>
     <br><br><br><br><br><br><br><br><br><br><br><br><br>
-    
+
     <script>
         function explore() {
             // Perform some action using JavaScript
