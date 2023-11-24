@@ -13,17 +13,19 @@
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <main>
         <div class="centered-button">
-            <?php
-                function explore() {
-                    // Change the window location to the home page
-                    echo 'Explore button clicked! Explore na teh walang pamasahe';
-                    // You can redirect to 'home.html' using header function if needed
-                    // header('Location: home.html');
-                }
-            ?>
             <button onclick="explore()">Explore</button>
         </div>
     </main>
     <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <script>
+        function explore() {
+            // Perform some action using JavaScript
+            alert("Explore button clicked! Explore na teh walang pamasahe");
+
+            // You can open a new tab using window.open
+            window.open('home.php', '_blank');
+        }
+    </script>
 </body>
 </html>
