@@ -1,10 +1,9 @@
-
 .topnav {
     background-color: #333;
     overflow: hidden;
     text-align: right;
   }
-  
+ 
   .topnav a {
     float: left;
     color: #f2f2f2;
@@ -13,16 +12,18 @@
     text-decoration: none;
     font-size: 17px;
   }
-  
+ 
   .topnav a:hover {
     background-color: #ddd;
     color: black;
   }
 
+
   .topnav a.active {
     background-color: #04AA6D;
     color: white;
   }
+
 
 /*.....*/
 /* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
@@ -33,7 +34,7 @@
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   }
-  
+ 
   /* Style the icon bar links */
   .icon-bar a {
     display: block;
@@ -43,36 +44,38 @@
     color: white;
     font-size: 20px;
   }
-  
+ 
   /* Style the social media icons with color, if you want */
   .icon-bar a:hover {
     background-color: #000;
   }
-  
+ 
   .facebook {
     background: #3B5998;
     color: white;
   }
-  
+ 
   .twitter {
     background: #55ACEE;
     color: white;
   }
-  
+ 
   .google {
     background: #dd4b39;
     color: white;
   }
-  
+ 
   .linkedin {
     background: #007bb5;
     color: white;
   }
-  
+ 
   .youtube {
     background: #bb0000;
     color: white;
   }
+
+
 
 
 body {
@@ -80,19 +83,22 @@ body {
     background-image: url(pics/wallpaper.jpg);  
 }
 
+
 nav li {
     display: inline;
     margin-right: 20px;
-    
+   
 }
+
 
 nav a {
     text-decoration:none;
     color: #081329;
     font-weight: bold;
     text-align:right;
-    
+   
 }
+
 
     main {
     padding: 20px;
@@ -113,7 +119,9 @@ nav a {
         box-shadow: 0 0 10px rgba(196, 181, 181, 0.1);
         text-align: left;
 
+
         display: flex;
+
 
     }
     .card{
@@ -123,7 +131,7 @@ nav a {
         background-color: #382020;
         flex: 1;
         transition: .3s all ease;
-        
+       
     }
     .card:hover{
         flex:2;
@@ -132,8 +140,8 @@ nav a {
 /* find a job css */
 .parallax {
     background-image: url("pics/proo.jpeg");
-    min-height: 500px; 
-  
+    min-height: 500px;
+ 
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -152,23 +160,26 @@ section {
 }
 /* Mabini CareerSeek */
 
+
   h1 {
     font-size: 50px;
     color: rgb(36, 95, 12);
   }
-  
+ 
   /* footer */
   p {
     font-size: 16px;
     color: #201f1f;
     text-align: center;
     padding: 10px;
-  
+ 
   }
 
+
   img {
-    width: 50%; 
+    width: 50%;
   }
+
 
   .member {
     width: 5;
@@ -177,6 +188,7 @@ section {
     text-align: center;
   }  
 
+
 /*contact css*/
 h1 {
     text-align: center;
@@ -184,7 +196,9 @@ h1 {
    
 }
 
+
 /*reviews*/
+
 
 input,textarea {
     padding: 10px;
@@ -196,14 +210,17 @@ input,textarea {
     text-align: left;
 }
 
+
 input[type="submit"] {
     color: white;
     cursor: pointer;
 }
 
+
 input[type="submit"]:hover {
     background-color: #45a049;
 }
+
 
 .review {
     margin-bottom: 20px;
@@ -211,11 +228,13 @@ input[type="submit"]:hover {
     padding-bottom: 10px;
 }
 
+
 /* Add styles for the active link in the navigation bar */
 .topnav a.active {
   background-color: #4CAF50;
   color: white;
 }
+
 
 /* Style for the image gallery cards */
 .card {
@@ -225,6 +244,7 @@ input[type="submit"]:hover {
   margin: 10px;
   cursor: pointer;
 }
+
 
 /* Style for the modal (popup) */
 .modal {
@@ -241,6 +261,7 @@ input[type="submit"]:hover {
   background-color: rgba(0,0,0,0.9);
 }
 
+
 /* Style for the modal content (the image) */
 .modal-content {
   margin: auto;
@@ -249,17 +270,20 @@ input[type="submit"]:hover {
   max-height: 80%;
 }
 
+
 .form-container {
   text-align: left; /* Align the form to the left */
   margin-top: 20px;
   margin-left: 20px; /* Add left margin for spacing */
 }
 
+
 .rating-container {
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
 }
+
 
 .rating-container span {
   font-size: 30px;
@@ -268,14 +292,17 @@ input[type="submit"]:hover {
   cursor: pointer;
 }
 
+
 .rating-container span:hover {
   color: #ff9800;
 }
+
 
 .reviews-container {
   text-align: center; /* Align other reviews to the left */
   margin-top: 20px;
 }
+
 
 .review {
   border: 1px solid #ccc;
@@ -283,13 +310,16 @@ input[type="submit"]:hover {
   margin-bottom: 10px;
   text-align: left;
 
+
 }
+
 
 /* Add styles for the navigation bar */
 .topnav {
   overflow: hidden;
   background-color: #333;
 }
+
 
 .topnav a {
   float: left;
@@ -300,15 +330,18 @@ input[type="submit"]:hover {
   text-decoration: none;
 }
 
+
 .topnav a:hover {
   background-color: #ddd;
   color: black;
 }
 
+
 .topnav a.active {
   background-color: #4CAF50;
   color: white;
 }
+
 
 /* Add styles for the footer */
 footer {
@@ -316,11 +349,13 @@ footer {
   margin-top: 20px;
 }
 
+
 .average-rating-container {
   display: flex;
   align-items: center;
   margin-top: 10px;
 }
+
 
 .star-icon {
   color: #ff9800;
@@ -328,7 +363,9 @@ footer {
   margin-right: 5px;
 }
 
+
 /* adding */
+
 
 .momo {
   display: flex;
@@ -336,18 +373,21 @@ footer {
       flex-wrap: wrap;
     }
 
+
     .momo a {
       text-decoration: none; /* Remove underlines from links */
-      margin: 10px; 
+      margin: 10px;
     }
+
 
     .momo img {
       width: 100%; /* Set the width of each image to 100% of the container */
       max-width: 200px; /* Set the maximum width for responsiveness */
       height: auto; /* Maintain the aspect ratio */
       border: 2px solid #ccc; /* Add a border for better visibility */
-      border-radius: 8px; 
+      border-radius: 8px;
     }
+
 
     /* Media query for smaller screens */
     @media screen and (max-width: 600px) {
@@ -355,5 +395,3 @@ footer {
         max-width: 100%; /* Adjust the maximum width for smaller screens */
       }
     }
-        
-    
