@@ -1,41 +1,46 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    uploadData();
-}
-
 function uploadData()
 {
     $email = isset($_POST['email']) ? $_POST['email'] : '';
     $feedback = isset($_POST['feedback']) ? $_POST['feedback'] : '';
 
-//Submitting the database
-$servername = "localhost";
-$username = "root";
-$password = " ";
-$database = "feedback";
+    //Submitting to the database
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $database = "feedback";
 
-//create connection
-$conn = mysqli_connect($servername, $username, $password,$database);
+    // Create connection
+    $conn = mysqli_connect($servername, $username, $password, $database);
 
-if (!$conn){
-    echo '<div class="alert alert-warning alert-dismissible fade show" role"alert" 
-    <strong>Connection Failed</strong> </div>'. mysqli_connect_error();
-}
-else{
-    $sql ="INSERT INTO `storedfeedbacks` ( `email`, `feedBack`, `date`) VALUES (NULL, '$feedback', current_timestamp())";
-    $result =mysqli_query($conn, $sql);
-    if ($result){
-        echo '<div class="alert alert-warning alert-dismissible fade show" role"alert" <strong>Success!<
-        /strong> feedback is submitted from ' .$email. 'Thankyou!! </div>';
+    if (!$conn) {
+        echo '<div class="alert alert-warning alert-dismissible fade show" role"alert" <strong>Connection Failed</strong> </div>' . mysqli_connect_error();
+    } else {
+        $sql = "INSERT INTO `storedfeedbacks` (`email`, `feedBack`, `date`) VALUES (?, ?, current_timestamp())";
+
+        $stmt = mysqli_prepare($conn, $sql);
+
+        if ($stmt) {
+            mysqli_stmt_bind_param($stmt, "ss", $email, $feedback);
+
+            $result = mysqli_stmt_execute($stmt);
+
+            if ($result) {
+                echo '<div class="alert alert-warning alert-dismissible fade show" role"alert" <strong>Success!</strong> Feedback is submitted from ' . $email . ' Thank you!! </div>';
+            } else {
+                echo '<div class="alert alert-warning alert-dismissible fade show" role"alert" <strong>Error uploading data</strong></div>' . mysqli_stmt_error($stmt);
+            }
+
+            mysqli_stmt_close($stmt);
+        } else {
+            echo '<div class="alert alert-warning alert-dismissible fade show" role"alert" <strong>Error preparing statement</strong></div>' . mysqli_error($conn);
+        }
+
+        mysqli_close($conn);
     }
-    else{
-        echo '<div class="alert alert-warning alert-dismissible fade show" role"alert" <strong>Error uploading data<
-        /strong></div>' .mysqli_error($conn);
-    }
 }
-}
+
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
