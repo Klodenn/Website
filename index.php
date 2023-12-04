@@ -8,8 +8,9 @@
 </head>
 <body>
     <header>
-        <h1>Finding Job Information System</h1>
+        <h1>Looking For A Job???</h1>
     </header>
+    
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <main>
         <div class="centered-button">

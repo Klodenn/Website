@@ -7,26 +7,42 @@
 </head>
 
 <body>
+<div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">MaCJo</h2>
+            </div> 
+    
 
-    <div class="topnav">
-        <a class="active" href="home.php">Home</a>
-        <a href="find_a_jobs.php">Find a Jobs</a>
-        <a href="about.php">About</a>
-        <a href="reviews.php">Reviews</a>
-        <a href="contact.php">Contact</a>
+            <div class="menu">
+                <ul>
+                    <li><a href="home.php">HOME</a></li>
+                    <li><a href="about.php">ABOUT</a></li>
+                    <li><a href="jobs.php">JOBS</a></li>
+                    <li><a href="review.php">REVIEWS</a></li>
+                    <li><a href="contact.php">CONTACT</a></li>
+                </ul>
+            </div>
+
 
         <div class="about-section">
-            <h1>About Us</h1>
-            <p>Some text about who we are and what we do.</p>
+        <br><br><br><br><br><br>
+            <h1>ABOUT US</h1>
+            <h3>Mission</h3>
+            <p>To connect job seekers with opportunities through a user-friendly Job Information System, fostering career growth and skill development.</p>
+            <br>
+            <h3>Vission</h3>
+            <p>To be the top global platform, revolutionizing the job search experience by offering tailored resources and cutting-edge technology for seamless career advancement.</p>
+
         </div>
 
         <h1 style="text-align:center">Our Team</h1>
         <div class="row">
             <div class="column">
                 <div class="card">
-                    <img src="pics/bilog (1).jpg" alt="Joy" style="width:100%">
+                    <img src="pics/IDPICTURES1.jpg" alt="Joy" style="width:100%">
                     <div class="container">
-                        <h2>Joy Ordono</h2>
+                        <h2>Joy Ordoño</h2>
                         <p class="title">Web Developer</p>
                         <p>Kay hotdog seller lang magtatampo</p>
                         <p>joyordono546@gmail.com</p>
@@ -60,6 +76,7 @@
         </div>
 
     </div>
+    
 
 </body>
 

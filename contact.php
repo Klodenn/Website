@@ -7,17 +7,23 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title></title>
-</head>
-
+    </head>
 <body>
+<div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">MaCJo</h2>
+            </div>
 
-    <div class="topnav">
-        <a class="active" href="home.php">Home</a>
-        <a href="find_a_jobs.php">Find a Jobs</a>
-        <a href="about.php">About</a>
-        <a href="reviews.php">Reviews</a>
-        <a href="contact.php">Contact</a>
-    </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="home.php">HOME</a></li>
+                    <li><a href="about.php">ABOUT</a></li>
+                    <li><a href="jobs.php">JOBS</a></li>
+                    <li><a href="review.php">REVIEWS</a></li>
+                    <li><a href="contact.php">CONTACT</a></li>
+                </ul>
+            </div>
 
     <div class="icon-bar">
         <a href="https://www.facebook.com" class="facebook"><i class="fa fa-facebook"></i></a>

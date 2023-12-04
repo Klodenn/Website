@@ -1,27 +1,42 @@
 <!DOCTYPE html>
 <html>
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="service.css">
+    <link rel="stylesheet" type="text/css" href="job1234.css">
 </head>
 
 <body>
-    <div class="topnav">
-        <a class="active" href="home.php">Home</a>
-        <a href="find_a_jobs.php">Find a Jobs</a>
-        <a href="about.php">About</a>
-        <a href="reviews.php">Reviews</a>
-        <a href="contact.php">Contact</a>
-    </div>
+<div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">MaCJo</h2>
+            </div>
 
+            <div class="menu">
+                <ul>
+                    <li><a href="home.php">HOME</a></li>
+                    <li><a href="about.php">ABOUT</a></li>
+                    <li><a href="jobs.php">JOBS</a></li>
+                    <li><a href="reviews.php">REVIEWS</a></li>
+                    <li><a href="contact.php">CONTACT</a></li>
+                </ul>
+            </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <h1>SERVICE CREW</h1>
     <div class="tab">
-        <button class="tablinks" onmouseover="openCity(event, 'Company')">Company</button>
-        <button class="tablinks" onmouseover="openCity(event, 'Location')">Location</button>
-        <button class="tablinks" onmouseover="openCity(event, 'Description')">Description</button>
-    </div>
+    <button class="tablinks" onmouseover="openCity(event, 'Company')">Company</button>
+    <button class="tablinks" onmouseover="openCity(event, 'Location')">Location</button>
+    <button class="tablinks" onmouseover="openCity(event, 'Qualification')">Qualification</button>
+    <button class="tablinks" onmouseover="openCity(event,'Requirements')">Requirements</button>
+    <button class="tablinks" onmouseover="openCity(event,'Benefits')">Benefits</button>
+  </div>
 
     <div id="Company" class="tabcontent">
         <h3>Company</h3>
@@ -35,11 +50,27 @@
         <p>R.P. Amurao Ave., Municipal Government Bldg., Brgy. Poblacion 4202 Mabini, Philippines</p>
     </div>
 
-    <div id="Description" class="tabcontent">
-        <h3>Description</h3>
-        <p>*18y/o and above</p>
-        <p>*At least Highschool Graduate (non K-12), SHS Grad </p>
-        <p>*With or Without Experience</p>
+    <div id="Qualification" class="tabcontent">
+        <h3>Qualification</h3>
+        <p>●   Customer Oriented</p>
+        <p>●   18y/o and above</p>
+        <p>●   At least Highschool Graduate (non K-12), SHS Grad </p>
+        <p>●   With or Without Experience</p>
+    </div>
+
+    <div id="Requirements" class="tabcontent">
+        <h3>Requirements</h3>
+        <p>●   Resume</p>
+        <p>●   Job Application</p>
+        <p>●   Medical</p>
+    </div>
+
+
+    <div id="Benefits" class="tabcontent">
+        <h3>Benefits</h3>
+        <p>●   Meal Discount</p>
+        <p>●   Health Insurance</p>
+        <p>●   Uniform Provided</p>
     </div>
 
     <script>
